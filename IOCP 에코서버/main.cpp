@@ -1,13 +1,27 @@
-#include "Network.h"
+ï»¿#include "Network.h"
 #include <stdio.h>
 #include <conio.h>
 
-#define SERVERPORT	11603
+#define SERVERPORT	6000
+
+void OnRecv(SESSIONID sessionId, SerializationBuffer& packet)
+{
+	_int64 echoBody;
+	SerializationBuffer sendPacket(sizeof(_int64));
+	packet >> echoBody;
+
+	//printf("SESSION_ID[%lld] %lld\n", sessionId, echoBody);
+
+	sendPacket << echoBody;
+	SendPacket(sessionId, sendPacket);
+}
 
 int shutdown = false;
 int main(void)
 {
 	int key;
+
+	SetOnRecvEvent(OnRecv);
 	if (!InitNetworkLib(SERVERPORT))
 	{
 		return 0;
@@ -26,7 +40,7 @@ int main(void)
 		}
 	}
 
-	printf("¸ÞÀÎ ½º·¹µå Á¾·á ¿Ï·á\n");
+	printf("ë©”ì¸ ìŠ¤ë ˆë“œ ì¢…ë£Œ ì™„ë£Œ\n");
 	return 0;
 }
 
