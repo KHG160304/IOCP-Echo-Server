@@ -22,6 +22,7 @@ public:
 	void ClearBuffer(void);
 	char* GetRearBufferPtr(void) const;
 	char* GetFrontBufferPtr(void) const;
+	char* GetInternalBufferPtr(void) const;
 private:
 	char* __internalBuffer;
 	int __capacity;

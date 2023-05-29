@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <conio.h>
 
-#define SERVERPORT	11603
+#define SERVERPORT	6000
 
 int shutdown = false;
 int main(void)
