@@ -222,3 +222,8 @@ char* RingBuffer::GetFrontBufferPtr(void) const
 {
 	return this->__internalBuffer + this->__queueFrontIndex;
 }
+
+char* RingBuffer::GetInternalBufferPtr(void) const
+{
+	return this->__internalBuffer;
+}
