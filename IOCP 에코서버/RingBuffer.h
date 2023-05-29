@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef __RING_BUFFER_H__
 #define __RING_BUFFER_H__
 class RingBuffer
@@ -22,6 +22,7 @@ public:
 	void ClearBuffer(void);
 	char* GetRearBufferPtr(void) const;
 	char* GetFrontBufferPtr(void) const;
+	char* GetInternalBufferPtr(void) const;
 private:
 	char* __internalBuffer;
 	int __capacity;

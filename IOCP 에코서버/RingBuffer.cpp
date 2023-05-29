@@ -7,7 +7,7 @@ static int minCapacity = 2; // 100byte is minimum size
 
 RingBuffer::RingBuffer(void)
 	: __capacity(defaultCapacity + 1)
-	, __internalBuffer(new char[defaultCapacity])
+	, __internalBuffer(new char[defaultCapacity + 1])
 	, __queueFrontIndex(0)
 	, __queueRearIndex(0)
 {
@@ -221,4 +221,9 @@ char* RingBuffer::GetRearBufferPtr(void) const
 char* RingBuffer::GetFrontBufferPtr(void) const
 {
 	return this->__internalBuffer + this->__queueFrontIndex;
+}
+
+char* RingBuffer::GetInternalBufferPtr(void) const
+{
+	return this->__internalBuffer;
 }

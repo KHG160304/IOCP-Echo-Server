@@ -1,8 +1,8 @@
-#include "Network.h"
+ï»¿#include "Network.h"
 #include <stdio.h>
 #include <conio.h>
 
-#define SERVERPORT	11603
+#define SERVERPORT	6000
 
 int shutdown = false;
 int main(void)
@@ -26,7 +26,7 @@ int main(void)
 		}
 	}
 
-	printf("¸ŞÀÎ ½º·¹µå Á¾·á ¿Ï·á\n");
+	printf("ë©”ì¸ ìŠ¤ë ˆë“œ ì¢…ë£Œ ì™„ë£Œ\n");
 	return 0;
 }
 
