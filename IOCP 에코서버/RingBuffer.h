@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef __RING_BUFFER_H__
 #define __RING_BUFFER_H__
 class RingBuffer

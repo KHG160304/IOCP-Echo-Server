@@ -1,4 +1,4 @@
-#include "SerializationBuffer.h"
+﻿#include "SerializationBuffer.h"
 
 SerializationBuffer::SerializationBuffer()
 	: __internalBuffer(new char[SerializationBuffer::eCapacity::DEFAULT])
